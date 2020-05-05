@@ -7,7 +7,11 @@ const SignUpLayout = () => {
   return (
     <View style={{flex: 1}}>
       <View style={styles.container}>
-        <TextBox />
+        <View style={styles.textInputs}>
+          <TextBox placeholder={'User Name'} />
+          <TextBox placeholder={'Email Address'} />
+          <TextBox placeholder={'Password'} />
+        </View>
         <View style={styles.textContainer}>
           <Text style={styles.outerText}>
             By signing Up you accept our
@@ -42,5 +46,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     margin: 10,
+  },
+  textInputs: {
+    justifyContent: 'space-between',
   },
 });

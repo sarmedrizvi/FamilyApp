@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import SignUpLayout from '../layout/SignUpLayout';
-import NavBar from '../components/NavBar';
+// import NavBar from '../components/NavBar';
 
 const SignUpScreen = () => {
   return (
     <View style={styles.container}>
-      <NavBar title="Sign Up" leftButton="back" />
+      {/* <NavBar title="Sign Up" leftButton="Back" /> */}
       <SignUpLayout />
     </View>
   );

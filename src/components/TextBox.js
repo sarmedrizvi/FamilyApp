@@ -3,10 +3,10 @@ import React from 'react';
 import {StyleSheet, Text, View, TextInput} from 'react-native';
 import color from '../constant/color';
 
-const TextBox = () => {
+const TextBox = props => {
   return (
     <View>
-      <TextInput placeholder="Email Address" style={styles.Input} />
+      <TextInput placeholder={props.placeholder} style={styles.Input} />
     </View>
   );
 };
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1.4,
     borderColor: color.primary,
     marginHorizontal: 5,
+    marginVertical: 9,
     textAlign: 'center',
   },
 });

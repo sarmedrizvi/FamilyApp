@@ -1,8 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
 import color from '../constant/color';
-
+import {useNavigation} from '@react-navigation/native';
 const getStarted = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>
@@ -10,6 +12,7 @@ const getStarted = () => {
           style={styles.button}
           title="Get Started"
           color={color.primary}
+          onPress={() => navigation.navigate('SignUpEmail')}
         />
       </View>
       <View>
