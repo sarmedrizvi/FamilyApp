@@ -6,7 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import StartScreen from './src/screens/StartScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-
+import SignInScreen from './src/screens/LoginScreen';
 const Stack = createStackNavigator();
 const App = () => {
   return (
@@ -25,7 +25,28 @@ const App = () => {
               title: 'Sign Up',
               headerTitleAlign: 'center',
               headerBackImage: () => (
-                <FontAwesome5Icon name="times" title="Info" color="black" size={15} />
+                <FontAwesome5Icon
+                  name="times"
+                  title="Info"
+                  color="black"
+                  size={15}
+                />
+              ),
+            }}
+          />
+          <Stack.Screen
+            name="Login In"
+            component={SignInScreen}
+            options={{
+              title: 'Login',
+              headerTitleAlign: 'center',
+              headerBackImage: () => (
+                <FontAwesome5Icon
+                  name="times"
+                  title="Info"
+                  color="black"
+                  size={15}
+                />
               ),
             }}
           />

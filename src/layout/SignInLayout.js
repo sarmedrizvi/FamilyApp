@@ -5,38 +5,30 @@ import color from '../constant/color';
 import {db, auth} from '../../plugins/firebase';
 
 const SignUpLayout = () => {
-  const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const onSignUp = () => {
-    
     auth
       .createUserWithEmailAndPassword(email, password)
       .then(user => {
-        console.log(user.user.uid)
+        console.log(user.user.uid);
         // const userEntered = db.ref(`customers/${userName}`);
       })
-      .catch(err=>{
-        alert(err)
-      })
+      .catch(err => {
+        alert(err);
+      });
 
-      // .then(res => {
-      //   setEmail('');
-      //   setUserName('');
-      //   setPassword('');
-      // });
+    // .then(res => {
+    //   setEmail('');
+    //   setUserName('');
+    //   setPassword('');
+    // });
   };
   return (
     <View style={{flex: 1}}>
       <View style={styles.container}>
         <View style={styles.textInputs}>
-          <TextBox
-            placeholder={'User Name'}
-            onChangeText={event => {
-              setUserName(event);
-            }}
-          />
           <TextBox
             placeholder={'Email Address'}
             onChangeText={event => setEmail(event)}

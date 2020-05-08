@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:188977774038:android:bbed8831310cec1d5db877",
+        "mobilesdk_app_id": "1:188977774038:android:891d22e27b9dc8375db877",
         "android_client_info": {
-          "package_name": "com.familyapp"
+          "package_name": "com.softlamp.familyApp"
         }
       },
       "oauth_client": [

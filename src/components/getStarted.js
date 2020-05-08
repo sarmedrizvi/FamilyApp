@@ -4,7 +4,10 @@ import color from '../constant/color';
 import {useNavigation} from '@react-navigation/native';
 const getStarted = () => {
   const navigation = useNavigation();
-
+  const onLogin = () => {
+    console.log('inside');
+    navigation.navigate('Login In');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>
@@ -17,7 +20,10 @@ const getStarted = () => {
       </View>
       <View>
         <Text>
-          Already have an account? <Text style={styles.login}>Log In</Text>
+          Already have an account?
+          <Text onPress={onLogin} style={styles.login}>
+            Login In
+          </Text>
         </Text>
       </View>
     </View>
@@ -29,6 +35,7 @@ export default getStarted;
 const styles = StyleSheet.create({
   login: {
     color: color.primary,
+    padding: 5,
   },
   container: {
     width: '100%',

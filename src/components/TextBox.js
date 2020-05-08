@@ -6,7 +6,7 @@ import color from '../constant/color';
 const TextBox = props => {
   return (
     <View>
-      <TextInput placeholder={props.placeholder} style={styles.Input} />
+      <TextInput {...props} style={styles.Input} />
     </View>
   );
 };
